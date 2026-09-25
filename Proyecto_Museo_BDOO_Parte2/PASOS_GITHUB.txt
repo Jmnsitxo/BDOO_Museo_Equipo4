@@ -1,0 +1,62 @@
+PASOS PARA SUBIR EL PROYECTO A GITHUB
+
+1. Abre la carpeta del proyecto en VS Code.
+2. Abre Terminal > New Terminal.
+
+3. Inicializa Git:
+   git init
+
+4. Configura tus datos si todavía no lo hiciste:
+   git config --global user.name "Samuel Habid Bruno Canales"
+   git config --global user.email "TU_CORREO_DE_GITHUB"
+
+5. Crea la rama principal:
+   git branch -M main
+
+6. Agrega todos los archivos:
+   git add .
+
+7. Crea el primer commit:
+   git commit -m "Parte 2 BDOO Museo con ZODB"
+
+8. Crea un repositorio NUEVO en GitHub.
+   Ejemplo de nombre:
+   BDOO_Museo_Equipo4
+
+9. Copia la URL HTTPS del repositorio y conecta tu proyecto:
+   git remote add origin URL_DE_TU_REPOSITORIO
+
+10. Sube la rama principal:
+    git push -u origin main
+
+RAMAS POR INTEGRANTE
+
+Samuel:
+    git checkout -b samuel-modelos
+    git push -u origin samuel-modelos
+
+Nimsi:
+    git checkout main
+    git checkout -b nimsi-colecciones
+    git push -u origin nimsi-colecciones
+
+Ashley:
+    git checkout main
+    git checkout -b ashley-exposiciones
+    git push -u origin ashley-exposiciones
+
+Victor:
+    git checkout main
+    git checkout -b victor-consultas
+    git push -u origin victor-consultas
+
+Para volver a main:
+    git checkout main
+
+IMPORTANTE:
+- No subas museo.fs ni archivos temporales de ZODB.
+- Ya están incluidos en .gitignore.
+- Ejecuta primero:
+    pip install -r requirements.txt
+- Luego prueba:
+    python main.py
